@@ -9,5 +9,6 @@ def is_prime(n):
             return False
 
     return True
-print(is_prime(10))  
-print(is_prime(17))
+if __name__ == '__main__':
+    print(is_prime(10))  
+    print(is_prime(17))

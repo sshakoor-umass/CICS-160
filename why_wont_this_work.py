@@ -1,4 +1,4 @@
-#Name: Sheik Shakoor
+#Name: YOUR NAME
 
 #can't use math.sqrt?
 #try **0.5 instead (a**b -> raise a to the power of b -> a^b on a calculator)
@@ -23,7 +23,7 @@ if __name__ == '__main__':
         ## TEST 1: ##
         #y = x^2 + 8x + 16
         #should be: y1 = -8, y2 = -8
-    y1,y2 = (my_quadratic(1,8,16))
+    y1,y2 = my_quadratic(1,8,16)
     print(y1,y2)
 
         ## TEST 2: ##
