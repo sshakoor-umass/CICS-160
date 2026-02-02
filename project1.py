@@ -17,18 +17,7 @@ def are_relatively_prime(x, y):
             return False
 
     return True
-def primes_up_to(n):
-    primes = []
-
-    for i in range(2, n):
-        if is_prime(i):
-            primes.append(i)
-
-    return primes
-
 print(is_prime(10))  
 print(is_prime(17))  
 print(are_relatively_prime(10, 17))  
 print(are_relatively_prime(21, 10))  
-print(primes_up_to(10))  
-print(primes_up_to(1))  
