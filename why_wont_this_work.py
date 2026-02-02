@@ -7,7 +7,8 @@ def my_quadratic(a,b,c):
     # y1 = -b + √(b^2 - 4ac) / 2a
     # y2 = -b - √(b^2 - 4ac) / 2a
     # on error: print out error, and return warning values
-
+    if a == 0:
+        return None, None
     try:
         plus = (-b + ((b*b - 4*a*c)**0.5)) / (2*a)
         minus = (-b - ((b*b - 4*a*c)**0.5)) / (2*a)
