@@ -8,7 +8,6 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
-
 def are_relatively_prime(x, y):
     #number cant a factor bigger than itself
     smallest = min(x, y)
@@ -19,9 +18,19 @@ def are_relatively_prime(x, y):
             return False
 
     return True
+def primes_up_to(n):
+    primes = []
+
+    for i in range(2, n):
+        if is_prime(i):
+            primes.append(i)
+    return primes
 
 if __name__ == '__main__':
     print(is_prime(10))  
     print(is_prime(17))
     print(are_relatively_prime(10, 17))
     print(are_relatively_prime(21, 10))
+    print(primes_up_to(10))  
+    print(primes_up_to(1))  
+
