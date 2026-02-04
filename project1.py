@@ -25,6 +25,18 @@ def primes_up_to(n):
         if is_prime(i):
             primes.append(i)
     return primes
+def prime_decomposition(n):
+    factors = []
+    divisor = 2
+
+    while n > 1:
+        if n % divisor == 0:
+            factors.append(divisor)
+            n = n // divisor
+        else:
+            divisor += 1
+
+    return factors
 
 if __name__ == '__main__':
     print(is_prime(10))  
@@ -32,5 +44,7 @@ if __name__ == '__main__':
     print(are_relatively_prime(10, 17))
     print(are_relatively_prime(21, 10))
     print(primes_up_to(10))  
-    print(primes_up_to(1))  
-
+    print(primes_up_to(1))
+    print(prime_decomposition(10))  
+    print(prime_decomposition(24))  
+    print(prime_decomposition(101))  
