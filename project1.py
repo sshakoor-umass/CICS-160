@@ -37,6 +37,13 @@ def prime_decomposition(n):
             divisor += 1
 
     return factors
+def decomp_check(n):
+    factors = prime_decomposition(n)
+
+    if len(factors) != 2:
+        return False
+
+    return factors[0] != factors[1]
 
 if __name__ == '__main__':
     print(is_prime(10))  
