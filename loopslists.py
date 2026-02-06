@@ -1,15 +1,14 @@
-def listloop(threshold):
-    inp = []
-    while True:
-        # try/except for when the number isn't a float or an int
-        try:
-            num = float(input("Please enter a number: "))
-            inp.append(num)
-            if num < 0:
-                break
-        except:
-            print("That is not a valid number! ")
-    # if not above the threshold, doesn't getting appended
-    reached = [x for x in inp if x > threshold]
-    return(sum(reached)/len(reached))
-
+def password_checker(password):
+    chars = [x for x in password]
+    if len(chars) < 8:
+        return False
+    elif not chars[0] == chars[0].upper() and not chars[1] == chars[1].upper() and not chars[0] != chars[1]:
+        return False
+    else:
+        total = 0
+        for c in chars:
+            if not c.isalnum():
+                return False
+            if c.isdigit():
+                total += int(c)
+        return total % 2 == 0
